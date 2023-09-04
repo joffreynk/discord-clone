@@ -19,10 +19,17 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={`${font.className} max-w-[1336px] mx-auto`}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey='discord-theme'>
-            {children}
-          </ThemeProvider>
+        <body className={`${font.className} `}>
+          <div className="max-w-[1336px] mx-auto">
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              storageKey="discord-theme"
+            >
+              {children}
+            </ThemeProvider>
+          </div>
         </body>
       </html>
     </ClerkProvider>
