@@ -3,7 +3,7 @@
 import { currentUser, redirectToSignIn } from "@clerk/nextjs"
 import { dbConnection } from "@/lib/dbConnection";
 
-const findAndCreateProfile = async()=> {
+export const findAndCreateProfile = async()=> {
   const user = await currentUser();
 
   if(!user) return redirectToSignIn();
