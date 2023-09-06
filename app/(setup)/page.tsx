@@ -1,3 +1,4 @@
+import CreateServer from '@/components/forms/CreateServer';
 import { dbConnection } from '@/lib/dbConnection';
 import { findAndCreateProfile } from '@/lib/serverActions/profileActions'
 
@@ -15,7 +16,7 @@ export default async function SetUpPage() {
   })
   return (
     <div>
-      <h1>create a user</h1>
+      <CreateServer />
     </div>
   )
 }
